@@ -15,6 +15,13 @@
   border-bottom:1px solid grey;
 }
 
+span{
+  background-color: lightgrey;
+  border: 1px solid black;
+  cursor: pointer;
+  padding:5px;
+  margin-left:4px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -49,3 +56,4 @@
     transform: rotate(360deg);
   }
 }
+
