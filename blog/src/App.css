@@ -23,6 +23,10 @@ span{
   margin-left:4px;
 }
 
+h4{
+  cursor: pointer;
+}
+
 .modal{
   margin-top: 20px;
   padding:20px;
