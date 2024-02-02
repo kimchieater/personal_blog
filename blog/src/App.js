@@ -7,11 +7,11 @@ function App() {
   let [title, setTitle] = useState(['남자 코트 추천','강남 우동 맛집',  '파이썬 독학']);
   let [number, setNumber] = useState(0)
   let [modal, setModal] = useState("false")
-  let [numberI, setNumberI] = useState([0,1,2])
+
 
 
   let [likes, setLikes] = useState([0,0,0])
-
+  let [numberI, setNumberI] = useState(0);
 
 
   return (
@@ -58,6 +58,7 @@ function App() {
               let copy = [...likes];
               copy[i] = copy[i] + 1;
               setLikes(copy);
+
             }}>Like</span>{likes[i]}</h4>
             <p>2월 17일</p>
           </div>
@@ -68,22 +69,20 @@ function App() {
         modal === true ? <Modal title={title} setTitle={setTitle} numberI={numberI}></Modal> : null
       }
 
-    
     </div>
 
   );
 }
 const Modal = (props) =>{
+
+
   return(
     <div className="modal">
-      <h4>{props.title[0]}</h4>
-      <button onClick={()=>{
-        let copy = [...props.title];
-        copy[0] = "여자 코트 추천";
-        props.setTitle(copy);
-      }}>click Me</button>
+        <h4>{ props.title[props.numberI] }</h4>
         <p>날짜</p>
         <p>상세내용</p>
+
+
     </div>
   )
 }
