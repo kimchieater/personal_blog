@@ -53,7 +53,7 @@ function App() {
           return (
           <div className="list">
             <h4 onClick={()=>{
-              setModal(!modal);
+              setModal(!modal); setNumberI(i);
               }}>{title[i]}<span onClick={()=>{
               let copy = [...likes];
               copy[i] = copy[i] + 1;
@@ -65,6 +65,10 @@ function App() {
         )
         })
       }
+
+      <input type="text"/>
+      <button>submit</button>
+
       {
         modal === true ? <Modal title={title} setTitle={setTitle} numberI={numberI}></Modal> : null
       }
